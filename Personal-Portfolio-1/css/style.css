@@ -1,0 +1,323 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+ul {
+  list-style: none;
+}
+
+h1,
+h2,
+h3 {
+  font-family: inherit;
+  font-weight: inherit;
+  font-size: inherit;
+  color: inherit;
+}
+
+@font-face {
+  font-family: "Code Saver";
+  src: url(../design/fonts/CodeSaver-Regular.otf);
+}
+
+:root {
+  --mainbg: #f7e6d3;
+  --cardbg: #413e3d;
+  --darkgreen: #6a7a32;
+  --lightgreen: #a1c52a;
+  --brown: #563c38;
+  --orange: #c04e40;
+  --yellow: #ffd66d;
+  --white: #fff;
+
+  --biorhyme: "BioRhyme", serif;
+  --inter: "Inter", sans-serif;
+}
+
+/* HELPER CLASSES AND SHARED ATTRIBUTES */
+body,
+.about__sublist,
+.about__sublist li,
+.project,
+.project__languages,
+footer {
+  display: flex;
+}
+
+body,
+.project,
+footer {
+  flex-direction: column;
+}
+
+body,
+footer {
+  align-items: center;
+}
+
+.about,
+.project__thumbnail {
+  border-radius: 16px;
+}
+
+h1,
+h2 {
+  font-family: var(--biorhyme);
+}
+
+h1,
+h2,
+h3,
+.project__link,
+.more-info {
+  font-weight: 700;
+}
+
+.hero__description,
+footer h2 {
+  font-weight: 400;
+}
+
+.project__description,
+.project__link,
+.more-info,
+.footer__link {
+  font-size: 1.8rem;
+  line-height: 2.6rem;
+}
+
+.hero__description,
+.footer__title {
+  font-size: 2.8rem;
+}
+
+.hero__title,
+.projects__title {
+  line-height: 4.8rem;
+}
+
+.project__title,
+.footer__title {
+  line-height: 3.2rem;
+}
+
+.hero,
+.projects,
+.project__link,
+footer a {
+  color: var(--brown);
+}
+
+.hero__name,
+.projects__title,
+.more-info__link,
+.footer__title {
+  color: var(--darkgreen);
+}
+
+.project__languages,
+.project__link:hover,
+.more-info__link:hover,
+footer a:hover {
+  color: var(--orange);
+}
+
+.about__category,
+.about__link:hover {
+  color: var(--white);
+}
+
+.about__link,
+.project__link,
+.more-info__link,
+.footer__link {
+  transition: 0.3s color;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+/* ////////////////////////////////// */
+
+body {
+  min-height: 100vh;
+  margin: 2.4rem 1.6rem 4.8rem;
+  font-family: var(--inter);
+  background-color: var(--mainbg);
+}
+
+/* HERO SECTION */
+
+.smiley {
+  background: url(../design/img/happy-outline.svg) no-repeat;
+  background-size: contain;
+}
+
+.smiley--top {
+  width: 3.4rem;
+  height: 3.4rem;
+  margin-bottom: 4.4rem;
+}
+
+.hero {
+  margin-bottom: 4.8rem;
+}
+
+.hero__title {
+  font-size: 3.2rem;
+}
+
+.hero__description {
+  line-height: 4rem;
+}
+
+/* ABOUT SECTION */
+.about {
+  padding: 1.2rem 1.2rem 2.6rem;
+  margin-bottom: 4.8rem;
+  font-family: "Code saver";
+  font-size: 1.6rem;
+  line-height: 2.8rem;
+  background-color: var(--cardbg);
+}
+
+.about__item {
+  color: var(--yellow);
+}
+
+.about__link {
+  color: var(--lightgreen);
+}
+
+.control-icons {
+  width: 4rem;
+  height: 1rem;
+  background: url(../design/img/controlbuttons.svg) no-repeat;
+  background-size: cover;
+  margin-bottom: 1.6rem;
+}
+
+.about__list {
+  margin-left: 1.2rem;
+}
+
+.about__category:before {
+  content: "> Gio.";
+}
+
+.about__item:not(:last-child) {
+  margin-bottom: 2rem;
+}
+
+.about__sublist {
+  flex-wrap: wrap;
+}
+
+.about__sublist:before {
+  content: "[";
+}
+
+.about__sublist:after {
+  content: "]";
+}
+
+.about__sublist li:before {
+  content: "“";
+}
+
+.about__sublist li:not(:last-child):after {
+  content: "”,\00a0";
+}
+
+.about__sublist li:last-child:after {
+  content: "”";
+}
+
+/* PROJECTS */
+.projects {
+  margin-bottom: 7rem;
+}
+
+.projects__title {
+  text-align: center;
+  font-size: 4rem;
+  margin-bottom: 2.8rem;
+}
+
+.project__thumbnail {
+  width: 100%;
+  height: auto;
+  align-self: center;
+  object-fit: cover;
+  margin-bottom: 2.2rem;
+}
+
+.project {
+  margin-bottom: 5rem;
+}
+
+.project__title {
+  font-size: 2.8em;
+  margin-bottom: 0.8rem;
+}
+
+.project__description {
+  margin-bottom: 1.6rem;
+}
+
+.project__languages {
+  margin-bottom: 0.8rem;
+  font-weight: 600;
+  font-size: 1.2rem;
+  line-height: 1.4rem;
+}
+
+.project__languages li:not(:last-child):after {
+  content: "\00a0•\00a0";
+}
+
+.project__link {
+  display: block;
+  text-decoration: none;
+}
+
+.project__link:not(:last-child) {
+  margin-bottom: 0.8rem;
+}
+
+.project__link .arrow {
+  display: inline-block;
+  width: 1.6rem;
+  height: 1.6rem;
+  background: url(../design/img/arrow-forward.svg);
+  background-size: contain;
+  vertical-align: middle;
+}
+
+/* FOOTER */
+footer {
+  margin-bottom: 4rem;
+}
+
+.smiley--bottom {
+  width: 2.4rem;
+  height: 2.4rem;
+  margin-bottom: 0.8rem;
+}
+
+.footer__title {
+  margin-bottom: 0.9rem;
+}
