@@ -307,6 +307,10 @@ body {
   vertical-align: middle;
 }
 
+.project__link p {
+  display: inline;
+}
+
 /* FOOTER */
 footer {
   margin-bottom: 4rem;
