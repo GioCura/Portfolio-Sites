@@ -1,10 +1,12 @@
-@media (min-width: 1100px) {
+/* 1100px */
+@media (min-width: 68.75em) {
   .hero__description {
     margin-right: 28rem;
   }
 }
 
-@media (min-width: 1020px) {
+/* 1020px */
+@media (min-width: 63.75em) {
   .projects__list {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -17,7 +19,8 @@
   }
 }
 
-@media (min-width: 600px) {
+/* 600px */
+@media (min-width: 37.5em) {
   body {
     margin: 4.8rem 1.6rem 4.8rem;
   }
